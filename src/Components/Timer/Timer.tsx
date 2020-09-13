@@ -8,7 +8,23 @@ const Timer = () => {
   const [isStart, setIsStart] = useState<boolean>(false);
 
   const Start = () => {
-    console.log("Start");
+    if (isStart === true) {
+      return;
+    }
+    let myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(myInterval);
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+      }
+    }, 1000);
+    setIsStart(true);
   };
   const Stop = () => {
     console.log("Stop");
