@@ -11,7 +11,7 @@ const Timer = () => {
     if (isStart === true) {
       return;
     }
-    let myInterval = setInterval(() => {
+    const myInterval = setInterval(() => {
       if (seconds > 0) {
         setSeconds(seconds - 1);
       }
@@ -27,16 +27,20 @@ const Timer = () => {
     setIsStart(true);
   };
   const Stop = () => {
-    console.log("Stop");
+    clearInterval(myInterval);
+    setIsStart(false);
+  }
   };
   const Reset = () => {
-    console.log("Reset");
+    Stop()
   };
   return (
     <div>
       <h1>
         {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         <TimerButton buttonAction={Start} buttonValue={"Start"} />
+        <TimerButton buttonAction={Stop} buttonValue={"Start"} />
+        <TimerButton buttonAction={Reset} buttonValue={"Start"} />
       </h1>
     </div>
   );
