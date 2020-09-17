@@ -1,10 +1,10 @@
 import React from "react";
 import "./TimerButton.css";
 
-const TimerButton = ({ buttonAction }: any, { buttonValue }: any) => {
+const TimerButton = ({ buttonAction, buttonValue }: any) => {
   return (
-    <div onClick={() => buttonAction}>
-      <h1>{buttonValue}</h1>
+    <div onClick={buttonAction}>
+      <p>{buttonValue}</p>
     </div>
   );
 };

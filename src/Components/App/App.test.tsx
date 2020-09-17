@@ -5,13 +5,12 @@ import App from "./App";
 import Timer from "../Timer/Timer";
 
 configure({ adapter: new Adapter() });
-
+let container = shallow(<App />);
 describe("App", () => {
-  let container = shallow(<App />);
   it("Should render a <div/>", () => {
     expect(container.find("div").length).toEqual(1);
   });
-  it("Should render a <div/>", () => {
+  it("Should render a component", () => {
     expect(container.containsMatchingElement(<Timer />)).toEqual(true);
   });
 });
