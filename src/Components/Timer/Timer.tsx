@@ -37,11 +37,15 @@ const Timer = () => {
     console.log("Reset");
   };
   return (
-    <div>
-      {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-      <TimerButton buttonAction={Start} buttonValue={"Start"} />
-      <TimerButton buttonAction={Stop} buttonValue={"Stop"} />
-      <TimerButton buttonAction={Reset} buttonValue={"Reset"} />
+    <div className="container">
+      <div className="display">
+        {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+      </div>
+      <div className="buttons">
+        <TimerButton buttonAction={Start} buttonValue={"Start"} />
+        <TimerButton buttonAction={Stop} buttonValue={"Stop"} />
+        <TimerButton buttonAction={Reset} buttonValue={"Reset"} />
+      </div>
     </div>
   );
 };

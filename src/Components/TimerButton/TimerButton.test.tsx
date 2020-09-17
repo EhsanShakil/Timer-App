@@ -5,10 +5,12 @@ import TimerButton from "./TimerButton";
 
 configure({ adapter: new Adapter() });
 
-let container = shallow(<TimerButton />);
+let container = shallow(
+  <TimerButton buttonAction={jest.fn()} buttonValue={""} />
+);
 
 describe("Timer Button", () => {
-  it("Should render a <div>", () => {
+  it("Should render a <div/>", () => {
     expect(container.find("div").length).toEqual(1);
   });
 });
