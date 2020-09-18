@@ -4,4 +4,12 @@
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 30px;
+  background-color: black;
+  color: white;
+}
+.buttonContainer:active {
+  background-color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

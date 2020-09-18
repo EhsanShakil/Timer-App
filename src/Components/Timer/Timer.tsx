@@ -16,7 +16,7 @@ const Timer = () => {
       if (seconds >= 0) {
         setSeconds(++seconds);
 
-        if (seconds === 10 % 0) {
+        if (seconds === 60) {
           setMinutes(++minutes);
           seconds = 0;
         }
@@ -37,7 +37,9 @@ const Timer = () => {
   return (
     <div className="container">
       <div className="display">
-        {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+        <div className="minutes">{minutes < 10 ? `0${minutes}` : minutes}</div>
+        <div className="collon">:</div>
+        <div className="seconds">{seconds < 10 ? `0${seconds}` : seconds}</div>
       </div>
       <div className="buttons">
         <TimerButton buttonAction={Start} buttonValue={"Start"} />
