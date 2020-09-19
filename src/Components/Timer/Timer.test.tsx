@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() });
 let container = shallow(<Timer />);
 describe("Timer", () => {
   it("Should render a <div/>", () => {
-    expect(container.find("div").length).toEqual(1);
+    expect(container.find("div").length).toEqual(6);
   });
   it("Should render a component", () => {
     expect(container.find("TimerButton").length).toEqual(3);
