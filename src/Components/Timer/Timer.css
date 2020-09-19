@@ -40,3 +40,6 @@
 .seconds:hover {
   transform: scale(1.03);
 }
+.text {
+  font-size: 30px;
+}
