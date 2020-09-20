@@ -7,6 +7,7 @@ import TimerButton from "../TimerButton/TimerButton";
 configure({ adapter: new Adapter() });
 
 let container = shallow(<Timer />);
+
 describe("Timer", () => {
   it("Should render a <div/>", () => {
     expect(container.find("div").length).toEqual(6);
