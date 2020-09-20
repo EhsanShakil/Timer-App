@@ -5,7 +5,11 @@ import Timer from "./Timer";
 import TimerButton from "../TimerButton/TimerButton";
 
 configure({ adapter: new Adapter() });
-
+let props = {
+  buttonAction: jest.fn(),
+  buttonValue: "",
+};
+let wrapper = shallow(<TimerButton {...props} />);
 let container = shallow(<Timer />);
 
 describe("Timer", () => {
