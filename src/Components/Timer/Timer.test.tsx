@@ -5,11 +5,11 @@ import Timer from "./Timer";
 import TimerButton from "../TimerButton/TimerButton";
 
 configure({ adapter: new Adapter() });
-let props = {
-  buttonAction: jest.fn(),
-  buttonValue: "",
-};
-let wrapper = shallow(<TimerButton {...props} />);
+// let props = {
+//   buttonAction: jest.fn(),
+//   buttonValue: "",
+// };
+// let wrapper = shallow(<TimerButton {...props} />);
 let container = shallow(<Timer />);
 
 describe("Timer", () => {
@@ -22,7 +22,14 @@ describe("Timer", () => {
   it("Should render Minutes", () => {
     expect(container.find("div.minutes").find("p.text").text()).toBe("Minutes");
   });
-  it("Should render Minutes", () => {
+  it("Should render Seconds", () => {
     expect(container.find("div.seconds").find("p.text").text()).toBe("Seconds");
+  });
+  it("Should render Minutes", () => {
+    const wrapper = shallow(<TimerButton buttonValue={"Start"} />);
+    const component = wrapper.find(TimerButton);
+    const result = component.text();
+
+    expect(result).toBe("Start");
   });
 });
