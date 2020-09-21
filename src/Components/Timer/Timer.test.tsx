@@ -19,4 +19,10 @@ describe("Timer", () => {
   it("Should render a component", () => {
     expect(container.find(TimerButton).length).toBe(3);
   });
+  it("Should render Minutes", () => {
+    expect(container.find("div.minutes").find("p.text").text()).toBe("Minutes");
+  });
+  it("Should render Minutes", () => {
+    expect(container.find("div.seconds").find("p.text").text()).toBe("Seconds");
+  });
 });

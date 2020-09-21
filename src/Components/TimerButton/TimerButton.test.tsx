@@ -15,6 +15,9 @@ describe("Timer Button", () => {
   it("Should render a <div/>", () => {
     expect(container.find("div").length).toEqual(1);
   });
+  it("Should render a <p/>", () => {
+    expect(container.find("p").length).toEqual(1);
+  });
   it("invokes Stop when the stop button is clicked", () => {
     const mockFunction = jest.fn();
     const test = shallow(<TimerButton buttonAction={mockFunction} />);
