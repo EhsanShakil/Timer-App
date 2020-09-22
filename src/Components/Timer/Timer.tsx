@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Timer.css";
 import TimerButton from "../TimerButton/TimerButton";
-import PropTypes from "prop-types";
 
 const Timer = () => {
   let [minutes, setMinutes] = useState<number>(0);
@@ -66,7 +65,3 @@ const Timer = () => {
   );
 };
 export default Timer;
-
-Timer.propTypers = {
-  buttionValue: PropTypes.string.isRequired,
-};
