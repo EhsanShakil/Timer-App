@@ -31,4 +31,13 @@ describe("Timer", () => {
   it("Should render Seconds", () => {
     expect(container.find("div.seconds").find("span").text()).toBe("00");
   });
+  it("Should render buttonValue Start prop", () => {
+    expect(container.find(TimerButton).at(0).props().buttonValue).toBe("Start");
+  });
+  it("Should render buttonValue Start prop", () => {
+    expect(container.find(TimerButton).at(1).props().buttonValue).toBe("Stop");
+  });
+  it("Should render buttonValue Start prop", () => {
+    expect(container.find(TimerButton).at(2).props().buttonValue).toBe("Reset");
+  });
 });
