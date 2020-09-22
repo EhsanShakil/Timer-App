@@ -31,16 +31,4 @@ describe("Timer", () => {
   it("Should render Seconds", () => {
     expect(container.find("div.seconds").find("span").text()).toBe("00");
   });
-  it("Should render buttonValue Start prop", () => {
-    const wrapper = mount(<TimerButton buttonValue={"Start"} />);
-    expect(wrapper.props().buttonValue).toBe("Start");
-  });
-  it("Should render buttonValue Stop prop", () => {
-    const wrapper = mount(<TimerButton buttonValue={"Stop"} />);
-    expect(wrapper.props().buttonValue).toBe("Stop");
-  });
-  it("Should render buttonValue Reset prop", () => {
-    const wrapper = mount(<TimerButton buttonValue={"Reset"} />);
-    expect(wrapper.props().buttonValue).toBe("Reset");
-  });
 });
