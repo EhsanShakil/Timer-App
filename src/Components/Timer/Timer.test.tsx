@@ -37,4 +37,7 @@ describe("Timer", () => {
   it("Should render buttonValue Reset prop", () => {
     expect(container.find(TimerButton).at(2).props().buttonValue).toBe("Reset");
   });
+  it("Should invoke start function", () => {
+    expect(container.find(TimerButton).at(0).simulate("click"));
+  });
 });
