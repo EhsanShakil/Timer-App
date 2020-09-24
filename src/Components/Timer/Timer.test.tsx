@@ -37,7 +37,12 @@ describe("Timer", () => {
   it("Should render buttonValue Reset prop", () => {
     expect(container.find(TimerButton).at(2).props().buttonValue).toBe("Reset");
   });
-  it("Should invoke start function", () => {
-    expect(container.find(TimerButton).at(0).simulate("click"));
+  it("Should invoke start function when clicked", () => {
+    const Start = jest.fn();
+    const wrapper = mount(
+      <TimerButton buttonAction={Start} buttonValue={"Start"} />
+    );
+    wrapper.find(TimerButton).simulate("click");
+    expect(Start).toHaveBeenCalledTimes(1);
   });
 });
