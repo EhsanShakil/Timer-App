@@ -57,9 +57,7 @@ const Timer = () => {
         </div>
       </div>
       <div className="buttons">
-        <span className="Start">
-          <TimerButton buttonAction={Start} buttonValue={"Start"} />
-        </span>
+        <TimerButton buttonAction={Start} buttonValue={"Start"} />
         <TimerButton buttonAction={Stop} buttonValue={"Stop"} />
         <TimerButton buttonAction={Reset} buttonValue={"Reset"} />
       </div>
